@@ -18,6 +18,10 @@ namespace ConsoleApplication1
 
             ImprimeListaOrdenadaNombre(almacen);
 
+            //Ordena la lista de elementos de acuerdo al precio.
+            Console.WriteLine("---- Ordena Elementos por precios-----");
+            ImprimelistaPrecios(almacen);
+
             Console.Read();
         }
 
@@ -45,6 +49,12 @@ namespace ConsoleApplication1
         {
             almacen.Sort(Producto.ComparaPorNombre);
 
+            ImprimeLista(almacen);
+        }
+
+        static void ImprimelistaPrecios(Almacen almacen){
+
+            almacen.Sort(Producto.comparaPrecios);
             ImprimeLista(almacen);
         }
 
