@@ -18,5 +18,10 @@ namespace ConsoleApplication1
             Precio = aPrecio;
             Descripcion = aDescripcio;
         }
+
+        public static int ComparaPorNombre(Producto producto1, Producto producto2)
+        {
+            return producto1.Nombre.CompareTo(producto2.Nombre);
+        } 
     }
 }
